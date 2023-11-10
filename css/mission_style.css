@@ -1,0 +1,1227 @@
+:root{
+	--background: #001539;
+	--boxshadow: 5px 5px 10px rgba(0, 0, 0, 0.20);
+	--backgroundhover:linear-gradient(174deg, rgba(16,54,116,1) 0%, rgba(0,18,50,1) 100%);
+    --color: #C4CFDE;
+    --h_color:#ff014f;  
+}
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+	
+}
+
+.icon{
+	position: fixed;
+	right: 30px;
+	z-index: 5;
+	top: 700px;
+	cursor: pointer;
+	
+}
+.icon i{
+	font-size: 80px;
+	color:#ff014f;
+	transition: 1s ease ;
+	padding: 10px;
+}
+@media(max-width:1400px){
+
+	
+	.icon{
+		top: 650px;
+		
+	}
+	.icon i{
+		font-size: 70px;
+	}
+}
+#top{
+opacity: 0;
+position: relative;
+left: 200px;
+}
+
+
+.nev{
+	width: 100%;
+	height: 80px;
+	display: flex;
+	justify-content:space-between;
+	padding-inline: 4%;
+	background: Transparent; 
+	align-items: center;
+	position: absolute;
+	top: 0px;
+	z-index: 5;
+}
+.nav_button{
+	display: block;
+}
+.logo img{
+	width: 150px;
+	animation: slideI 2s ease forwards ;
+}
+@keyframes slideI{
+	0%{
+		transform: translateX(-300px);
+		opacity: 0;
+	}
+	100%{
+		transform: translateX(0px);
+		opacity: 1;
+	}
+}
+
+.nav_button ul a{
+	text-decoration: none;
+	color: white;
+	font-size: 16px;
+	display: inline-block;
+	animation: slideTop .4s ease forwards;
+	animation-delay: calc(.2s * var(--i));
+	transform: translateY(60px);
+	opacity: 0;
+}
+@keyframes slideTop{
+	100%{
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+
+
+.nav_button ul a::after{
+	content: '';
+	width: 0%;
+	height: 2px;
+	background: #ff014f;
+	display: block;
+	margin: auto;
+	transition: 0.5s;
+}
+.nav_button ul a:hover::after{
+	width: 100%;
+}
+.nav_button ul:hover a{
+	filter: blur(1px);
+}
+.nav_button ul a:hover{
+	filter: blur(0px);
+}
+.nav_button ul a:not(:last-child){
+	margin-right: 60px;
+}
+
+.nev .search{
+	
+	height: 45%;
+	width: 12%;
+	border-radius: 20px;
+	border: 1px solid  #E7E7E7;
+	background: Transparent;
+	display: flex;
+	align-items: center;
+	
+}
+.container {
+  position: relative;
+	animation: slidey 2s ease forwards;
+
+}
+@keyframes slidey{
+	0%{
+		transform: translateX(200px);
+		opacity: 0;
+	}
+	100%{
+		transform: translateX(0px);
+		opacity: 1;
+	}
+}
+
+.input {
+  padding-left: 40px;
+  height: 40px;
+  font-size: 15px;
+  border: none;
+  color: black;
+  outline: none;
+  width: 200px;
+  transition: all ease 0.3s;
+  background-color: white;
+  box-shadow: 1.5px 1.5px 3px #0e0e0e, -1.5px -1.5px 3px rgb(95 94 94 / 25%), inset 0px 0px 0px #0e0e0e, inset 0px -0px 0px #5f5e5e;
+  border-radius: 50px;
+  cursor: text;
+}
+
+.input:focus,
+.input:not(:invalid) {
+  width: 200px;
+  cursor: text;
+  box-shadow: 0px 0px 0px #0e0e0e, 0px 0px 0px rgb(95 94 94 / 25%), inset 1.5px 1.5px 3px #0e0e0e, inset -1.5px -1.5px 3px #5f5e5e;
+}
+
+.input:focus + .icon,
+.input:not(:invalid) + .icon {
+  pointer-events: all;
+  cursor: pointer;
+}
+
+.container .icon {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 0px;
+  left: 0px;
+  padding: 8px;
+  pointer-events: none;
+   color: black;
+}
+
+.container .icon svg {
+  width: 100%;
+  height: 100%;
+}
+.nev .logo img{
+	width: 300px;
+	background: Transparent;
+	margin-top: 5px;
+}
+
+
+
+
+/* mobile start*/
+
+.mobile{
+	display: none;
+	z-index: 2;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	width: 100%;
+
+	
+}
+
+.monev{
+	width: 100%;
+	background: Transparent; 
+	display: flex;
+
+	display: flex;
+	justify-content: space-between;
+	position: fixed;
+	
+    
+	
+}
+.openmenu{
+	display: none;
+	position: absolute;
+	right: 0px;
+	top:80px;
+}
+
+.monav_button{
+    width: 200px;
+	height: 100vh;
+	background: var(--background);
+	box-shadow: 0px 5px 20px rgba(0, 0, 50, 0.9);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	
+	z-index: 2;
+	
+}
+.mologo .bi{
+	font-size: 40px;
+	color: var(--h_color);
+	font-weight: 1000;
+	color: var(--h_color);
+	cursor: pointer;
+	transition: .8s ease;
+}
+.mologo #menutw{
+	display: none;
+	font-size: 30px;
+}
+
+
+
+.mologo{
+	width: 100%;
+	height: 80px;
+	background: var(--background);
+	box-shadow: 0px 5px 20px rgba(0, 0, 50, 0.9);
+	display: flex;
+    align-items: center;
+	justify-content: space-between;
+	padding-inline: 4%;
+	
+	
+}
+.mologo img{
+	width: 200px;
+	animation: slideI 2s ease forwards ;
+	margin-left: 10px;
+	
+}
+@keyframes slideI{
+	0%{
+		transform: translateX(-300px);
+		opacity: 0;
+	}
+	100%{
+		transform: translateX(0px);
+		opacity: 1;
+	}
+}
+
+.monav_button ul a{
+	text-decoration: none;
+	margin: auto;
+	color: white;
+	font-size: 20px;
+	display: block;
+	animation: slideTop .4s ease forwards;
+	animation-delay: calc(.2s * var(--i));
+	transform: translateY(60px);
+	opacity: 0;
+	margin-top: 20px;
+	text-align: left;
+	
+}
+@keyframes slideTop{
+	100%{
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+.monav_button ul a:not(:first-child){
+	 
+	margin-top: 70px;
+
+}
+
+
+
+.monav_button ul a::after{
+	content: '';
+	width: 0%;
+	height: 2px;
+	background: #ff014f;
+	display: block;
+	margin: auto;
+	transition: 0.5s;
+}
+.monav_button ul a:hover::after{
+	width: 100%;
+}
+.monav_button ul:hover a{
+	filter: blur(1px);
+}
+.monav_button ul a:hover{
+	filter: blur(0px);
+}
+.monav_button ul a:not(:last-child){
+	margin-right: 60px;
+}
+
+.mocontainer {
+  position: relative;
+	animation: slidey 2s ease forwards;
+	margin: auto;
+
+}
+@keyframes slidey{
+	0%{
+		transform: translatey(200px);
+		opacity: 0;
+	}
+	100%{
+		transform: translate(0px);
+		opacity: 1;
+	}
+}
+
+.input {
+  padding-left: 40px;
+  height: 40px;
+  font-size: 15px;
+  border: none;
+  color: black;
+  outline: none;
+  width: 200px;
+  transition: all ease 0.3s;
+  background-color: white;
+  box-shadow: 1.5px 1.5px 3px #0e0e0e, -1.5px -1.5px 3px rgb(95 94 94 / 25%), inset 0px 0px 0px #0e0e0e, inset 0px -0px 0px #5f5e5e;
+  border-radius: 50px;
+  cursor: text;
+}
+
+.input:focus,
+.input:not(:invalid) {
+  width: 200px;
+  cursor: text;
+  box-shadow: 0px 0px 0px #0e0e0e, 0px 0px 0px rgb(95 94 94 / 25%), inset 1.5px 1.5px 3px #0e0e0e, inset -1.5px -1.5px 3px #5f5e5e;
+}
+
+.input:focus + .icon,
+.input:not(:invalid) + .icon {
+  pointer-events: all;
+  cursor: pointer;
+}
+
+.container .icon {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 0px;
+  left: 0px;
+  padding: 8px;
+  pointer-events: none;
+   color: black;
+}
+
+.container .icon svg {
+  width: 100%;
+  height: 100%;
+}
+.nev .logo img{
+	width: 300px;
+	background: Transparent;
+	margin-top: 5px;
+}
+
+@media(max-width:1150px){
+	.mobile{
+		display: block;
+	}
+	.desk{
+		display: none;
+	}
+}
+
+   
+
+@media(max-width:375px){
+	
+
+	.contentp p{
+        font-size: 20px;
+	}
+	.hero_vodeo{
+		flex-direction: row;
+		left: 5555px;
+	}
+	.Partners h2{
+		font-size: 10px;
+	}
+}
+
+
+/*end mobile*/
+
+
+
+
+
+
+
+.header{
+    width: 100%;
+    height:400px;
+    background: linear-gradient(rgba(32, 33, 39, 0.7),rgba(4,9,30,0.7)),url("https://hubblesite.org/files/live/sites/hubble/files/home/_images/banner_images/hs-banner-gold-solar-panel-deploy-1990.jpg?t=tn2400");
+    background-size: cover;
+    background-position: center;
+	background-origin: border-box;
+	background-repeat: no-repeat;
+	
+    display: grid;
+    place-items: center;
+
+
+}
+.header h1{
+    font-size: 80px;
+    color: rgb(255, 255, 255);
+    display: grid;
+}
+
+.main {
+    position: absolute;
+    background: #001232;
+	width: 100%;
+  }
+.possible{
+    width: 80%;
+	margin: 0px auto;
+	text-align: center;
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+.possible h3{
+    text-align: center;
+	font-size: 40px;
+	color: #C4CFDE;
+	margin-bottom: 20px;
+	font-weight: 500;
+	letter-spacing: 3px;
+    width: 60%;
+    margin: auto;
+}
+.headingp{
+	display: flex;
+	justify-content: center;
+	color: var(--color);
+	margin-left: 2px solid var(--color);
+}
+.headingp p{
+	font-size: 22px;
+	transition: .5s ease;
+	cursor: pointer;
+	text-decoration:underline;
+}
+.headingp p:hover{
+	color:var(--h_color);
+}
+.headingp p:nth-child(2){
+	border-left: 2px solid var(--h_color);
+	margin-left: 10px;
+	padding-left: 10px;
+	text-transform: capitalize;
+	transition: .5s ease;
+}
+.headingp p:nth-child(2):hover{
+	color: var(--h_color);
+	border-color: var(--color);
+}
+
+.headingp p:nth-child(1):hover + p{
+	border-color: var(--color);
+}
+.possiblcontent{
+    display: flex;
+    align-items: center;
+    background:var(--background);
+	box-shadow: var(--boxshadow);
+    min-height: 350px;
+	border-radius: 10px;
+	width: 100%;
+    margin-top: 50px;
+    z-index: 1;
+    box-sizing: border-box;
+    position: relative;
+
+    
+}
+.possiblcontent::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: var(--backgroundhover);
+    margin: auto;
+    transition: 0.5s ease;
+    opacity: 0;
+    top: 0px;
+    left: 0;
+    z-index: -1;
+    
+    border-radius: 10px;
+  }
+  .possiblcontent:hover::before {
+    opacity: 1;
+  }
+
+  .possiblcontent p{
+    transition: .5s;
+	text-align: center;
+	font-size:20px;
+	color: var(--color);
+	font-weight: 200;
+	position: relative;
+    line-height: 40px;
+	margin: 0px auto;
+	
+	
+  }
+  .possiblcontent:hover p{
+  transform: translateY(-8px);
+}
+
+.timelinemain{
+	background-image: url(https://hubblesite.org/files/live/sites/hubble/files/home/_images/bubble.jpg);
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	position: relative;
+	margin: auto;
+}
+.timelinemain a{
+	width: fit-content;
+	padding: 10px;
+	color: var(--color);
+	font-size: 25px;
+	position: sticky;
+	top:100px;
+	background: rgba(45,53,60,.85) ;
+	box-shadow: var(--boxshadow);
+	z-index: 3;
+	font-weight: 600;
+	margin: auto;
+	border-radius: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-transform: capitalize;
+    opacity: 1;
+	
+}
+.maintimelin{
+	margin-top: 80px;
+}
+.timeline {
+	
+	height: 100%;
+	position: relative;
+	max-width: 1200px;
+	margin: 0 auto;
+
+  }
+  
+  /* The actual timeline (the vertical ruler) */
+  .timeline::after {
+	content: '';
+	position: absolute;
+	width: 6px;
+	background-color: white;
+	top: 0;
+	bottom: 0;
+	left: 50%;
+	margin-left: -3px;
+  }
+  
+  /* Container around content */
+  .containerd {
+	padding: 10px 40px;
+	position: relative;
+	background-color: inherit;
+	width: 50%;
+  }
+  
+  /* The circles on the timeline */
+  .containerd::after {
+	content: '';
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	right: -17px;
+	background-color: white;
+	border: 4px solid #FF9F55;
+	top: 15px;
+	border-radius: 50%;
+	z-index: 1;
+  }
+  
+  /* Place the container to the left */
+  .left {
+	left: 0;
+  }
+  .left img{
+	width: 100%;
+  }
+  
+  /* Place the container to the right */
+  .right {
+	left: 50%;
+  }
+  .right img{
+	width: 100%;
+  }
+  /* Add arrows to the left container (pointing right) */
+  .left::before {
+	content: " ";
+	height: 0;
+	position: absolute;
+	top: 22px;
+	width: 0;
+	z-index: 1;
+	right: 30px;
+	border: medium solid white;
+	border-width: 10px 0 10px 10px;
+	border-color: transparent transparent transparent white;
+  }
+  
+  /* Add arrows to the right container (pointing left) */
+  .right::before {
+	content: " ";
+	height: 0;
+	position: absolute;
+	top: 22px;
+	width: 0;
+	z-index: 1;
+	left: 30px;
+	border: medium solid white;
+	border-width: 10px 10px 10px 0;
+	border-color: transparent white transparent transparent;
+  }
+  
+  /* Fix the circle for containers on the right side */
+  .right::after {
+	left: -16px;
+  }
+  
+  /* The actual content */
+  .content {
+	padding: 20px 30px;
+	background-color: white;
+	position: relative;
+	border-radius: 6px;
+  }
+  
+  /* Media queries - Responsive timeline on screens less than 600px wide */
+  @media screen and (max-width: 600px) {
+	/* Place the timelime to the left */
+	.timeline::after {
+	left: 31px;
+	}
+	
+	/* Full-width containers */
+	.containerd {
+	width: 100%;
+	padding-left: 70px;
+	padding-right: 25px;
+	}
+	
+	/* Make sure that all arrows are pointing leftwards */
+	.containerd::before {
+	left: 60px;
+	border: medium solid white;
+	border-width: 10px 10px 10px 0;
+	border-color: transparent white transparent transparent;
+	}
+  
+	/* Make sure all circles are at the same spot */
+	.left::after, .right::after {
+	left: 15px;
+	}
+	
+	/* Make all right containers behave like the left ones */
+	.right {
+	left: 0%;
+	}
+  }
+   
+
+
+  .firstpage{
+	width: 100%;
+    height:400px;
+    background: linear-gradient(rgba(32, 33, 39, 0.7),rgba(4,9,30,0.7)),url("https://hubblesite.org/files/live/sites/hubble/files/home/_images/banner_images/hs-banner-s109-e5377.jpg?t=tn2400");
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    place-items: center;
+	z-index: 2;
+  }
+  .firstpage h3{
+	font-size: 80px;
+	color: var(--color);
+  }
+   .servicemissio h4{
+	font-size: 40px;
+	color: var(--color);
+	text-align: center;
+	font-weight: 500;
+	text-transform: capitalize;
+	margin-top: 100px;
+   }
+   .contentimg{
+	width: 60%;
+	height: fit-content;
+	margin:  100px auto;
+	background: var(--background);
+	box-shadow: var(--boxshadow);
+	border-radius: 20px;
+   }
+   .slideshow-container{
+	padding: 30px 30px 100px 30px;
+   }
+   
+  .contentimg img {
+	width: 100%;
+	transition: 0.5s ease;
+  }
+
+  .content:hover  .contentimg{
+	transform: translateY(-8px);
+  }
+
+ 
+.mySlides {display: none;
+	
+}
+.mySlides img{
+	width: 100%;
+  height: 100%;
+  object-fit: cover;
+	
+}
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  margin: auto;
+  max-width: 100%;
+}
+
+/* Next & previous buttons */
+
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev{
+	left: 0;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text  {
+  color: #f2f2f2;
+  font-size: 15px;
+  position: absolute;
+  width: 100%;
+  text-align: left;
+  padding-top: 10px;
+ 
+}
+.text p{
+	width: 80%;
+	padding-top: 5px;
+}
+
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 40px;
+}
+.manindots{
+	position: absolute;
+	bottom:120px;
+	left: 50%;
+	transform: translate(-50%);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 18px;
+  width: 18px;
+  margin: 0 2px;
+ 
+  border-radius: 50%;
+  display: inline-block;
+  border: 2px solid var(--h_color);
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: var(--h_color);
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+.pcontent{
+	width: 70%;
+	margin: auto;
+	border-radius: 10px;
+	background: var(--background);
+	box-shadow: var(--boxshadow);
+	padding: 50px;
+
+}
+.pcontent p{
+	color: var(--color);
+	text-align: center;
+	margin-top: 30px;
+	font-weight: 300;
+	
+	
+}
+
+
+.expand{
+	 width: 60%;
+	 margin:  0px auto;
+	 margin-top: 20px;
+	 
+}
+
+.question{
+	background: var(--background);
+	box-shadow: var(--boxshadow);
+	display: flex;
+	width: 100%;
+	height: 80px;
+	justify-content: space-between;
+	align-items: center;
+	padding-inline: 2%;
+
+}
+.question h1{
+	
+	font-size: 22px;
+	color: var(--h_color);
+	font-weight: 300;
+	letter-spacing: 1px;
+}
+
+.question i{
+	color: var(--h_color);
+	font-size: 25px;
+	cursor: pointer;
+}
+.ans{
+	padding-left: 25px;
+	display: none;
+	
+	opacity: 0;
+}
+.ans h3{
+	color: var(--color);
+	padding-top: 20px;
+}
+.ans p{
+	color: var(--color);
+	padding-top: 20px;
+}
+
+.ans p span{
+	font-weight: 800;
+}
+.ansrow{
+	display: flex;
+	justify-content: space-evenly;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+.anstext{
+	flex-basis: 50%;
+}
+.anstext h5{
+	color: var(--color);
+	font-size: 26px;
+	font-weight: 500;
+}
+.anstext ul {
+	color: var(--color);
+	margin-top: 10px;
+}
+.ansimg{
+	flex-basis: 40%;
+}
+.ansimg figure{
+	border: 1px solid white;
+}
+.ansimg figure img{
+	width: 100%;
+}
+.ansimg figcaption {
+	color: var(--color);
+	text-align: center;
+	font-size: 15px;
+}
+
+
+
+
+
+
+
+.ansrowtwo{
+	display: flex;
+	flex-direction: column-reverse;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+.ansrowtwo .anstexttwo{
+	 margin-top: 60px;
+	 padding-left: 60px;
+}
+.ansrowtwo .anstexttwo h5{
+	color: var(--color);
+	font-size: 26px;
+	font-weight: 500;
+}
+.ansrowtwo .anstexttwo ul {
+	color: var(--color);
+	margin-top: 10px;
+}
+.ansrowtwo .ansimgtwo{
+	display: flex;
+	justify-content: space-evenly;
+	gap: 80px;
+	
+}
+.ansrowtwo .ansimgtwo figure{
+	border: 1px solid white;
+	flex-basis: 40%;
+}
+.ansrowtwo .ansimgtwo figure img{
+	width: 100%;
+}
+.ansrowtwo .ansimgtwo figcaption {
+	color: var(--color);
+	text-align: center;
+	font-size: 15px;
+}
+
+
+
+
+
+
+.footer{
+	width: 70%;
+	margin: 0px auto;
+	text-align: center;
+	padding-top: 40px;
+	padding-bottom: 50px;
+	
+	
+	
+}
+.rowtep{
+	 
+	display: flex;
+	justify-content: space-between;
+	margin: 0px auto;
+	width: 100%;
+	margin-top: 50px;
+}
+.footer a{
+	text-align: center;
+	font-size:18px;
+	color: #C4CFDE;
+	font-weight: 200;
+	position: relative;
+    width: 95%;
+	margin: 0px auto;
+}
+.aboutus{
+	display: flex;
+	flex-direction: column;
+	gap:18px;
+	
+}
+.space_ins_logo img{
+	width: 80%;
+	
+}
+
+.aboutus a{
+	text-decoration: none;
+	text-align: left;
+	font-size: 16px;
+
+}
+.logo i{
+	color: #ff014f;
+	font-size: 25px;
+	padding: 6px 13px;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: 0.8s ease;
+	box-shadow: var(--boxshadow);
+	background: var(--background);
+	margin-inline:20px;
+}
+
+
+
+
+
+
+
+@media(max-width:968px){
+
+
+	.header h1{
+		font-size: 7vw;
+	}
+	.possible{
+		width: 90%;
+	}
+
+	.possible h3{
+		width: 100%;
+		letter-spacing: normal;
+		font-size: 7vw;
+		line-height: 32px;
+		font-weight: 400;
+		text-transform: capitalize;
+	}
+
+	.headingp p{
+
+		font-size: 4vw;
+      
+
+	}
+	.headingp{
+		margin-left: 0px;
+	}
+
+	.headingp{
+		margin-top: 20px;
+	}
+    
+
+	.possiblcontent p{
+		font-size: 15px;
+		line-height: normal;
+	}
+
+	.firstpage{
+		height: 300px;
+	}
+     
+    .firstpage h3{
+		font-size: 9vw;
+	}
+    .servicemissio h4{
+		font-size: 6vw;
+		margin-top: 50px;
+	}
+	.contentimg{
+		margin:  50px auto;
+		width: 90%;
+	}
+	.slideshow-container{
+		padding: 5px 5px 100px 5px;
+	   }
+
+	   .text {
+		font-size:12px ;
+	   }
+	   .dot {
+		height: 12px;
+		width: 12px;
+	   }
+
+	   .prev, .next{
+		top: 30%;
+	   }
+
+	   .pcontent{
+		width: 100%;
+		padding: 10px;
+		font-size: 15px;
+	   }
+
+	   .pcontent p{
+		margin-top: 20px;
+	   }
+
+	   .expand{
+		width: 90%;
+	   }
+
+	   .question h1{
+		font-size: 18px;
+	   }
+	   .question i{
+		font-size: 20px;
+	   }
+	   .ansrow{
+		flex-direction: column;
+		justify-content: center;
+	   }
+	   .ansimg{
+		margin-top: 10px;
+	   }
+       .ansimgtwo{
+		flex-direction: column;
+	   }
+
+
+
+
+	   
+  .footer{
+    width: 90%;
+  }
+  .space_ins_logo{
+    display: none;
+  }
+  .rowtep{
+    display: flex;
+    flex-wrap: wrap;
+    
+  }
+  .logo{
+    margin-top: 50px;
+  }
+  .Pcontent p{
+    font-size: 4vw;
+    text-align: justify;
+  }
+  .logo i{
+    margin-inline:8px;
+  
+  }
+
+}
