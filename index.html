@@ -1,473 +1,554 @@
 <!doctype html>
 <html>
+
 <head>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/main_css.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,500;1,600&display=swap" rel="stylesheet">
-<meta charset="utf-8">
-	
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,500;1,600&display=swap"
+		rel="stylesheet">
+	<meta charset="utf-8">
+
 	<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Chakra+Petch:wght@300;400;500;700&family=Gasoek+One&display=swap" rel="stylesheet">
-	
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Chakra+Petch:wght@300;400;500;700&family=Gasoek+One&display=swap"
+		rel="stylesheet">
+
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-	
-	
-	
-<title>Hubble Space Talescope</title>
+
+
+
+	<title>Hubble Space Talescope</title>
 </head>
 
 <body>
 	<div id="loader">
-        <h1>0%</h1>
+		<h1>0%</h1>
 		<div class="contentq">
 			<div class="planet">
-			   <div class="ring"></div>
-				  <div class="cover-ring"></div>
-			   <div class="spots">
-				  <span></span>
-				  <span></span>
-				  <span></span>
-				  <span></span>
-				  <span></span>
-				  <span></span>
-				  <span></span>
-		 
-			   </div>
+				<div class="ring"></div>
+				<div class="cover-ring"></div>
+				<div class="spots">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+
+				</div>
 			</div>
-			
-		 </div>
-    </div>
-   
+
+		</div>
+	</div>
+
 	<div id="overlay"></div>
 	<div id="vdt">
-	<div class="video-one">
-		<video id="video-ppp" loop  plays-inline controls src="https://stsci-opo.org/STScI-01H2XDP62RE4PV8VDME6J7M1JK.mp4" type="video/mp4"></video>
-		<i id="close_video"  class="bi bi-x-square-fill"></i>
-		
-				</div>
+		<div class="video-one">
+			<video id="video-ppp" loop plays-inline controls
+				src="https://stsci-opo.org/STScI-01H2XDP62RE4PV8VDME6J7M1JK.mp4" type="video/mp4"></video>
+			<i id="close_video" class="bi bi-x-square-fill"></i>
+
 		</div>
+	</div>
 	<div id="overlaytwo"></div>
-		<div id="vdttwo">
-	<div class="video-one">
-		<video id="video-ppptwo" loop  plays-inline controls src="https://stsci-opo.org/STScI-01H0MY22SC4HPS3SYE78B4EZ4F.mp4" type="video/mp4"></video>
-		<i id="close_videotwo"  class="bi bi-x-square-fill"></i>
-		
-				</div>
+	<div id="vdttwo">
+		<div class="video-one">
+			<video id="video-ppptwo" loop plays-inline controls
+				src="https://stsci-opo.org/STScI-01H0MY22SC4HPS3SYE78B4EZ4F.mp4" type="video/mp4"></video>
+			<i id="close_videotwo" class="bi bi-x-square-fill"></i>
+
 		</div>
-	
+	</div>
+
 	<div class="icon">
-	
-	<i id="top" class=" scroll bi bi-arrow-up-circle-fill"></i>
+
+		<i id="top" class=" scroll bi bi-arrow-up-circle-fill"></i>
 	</div>
-    <script>
-var scrollButton= document.getElementById("top");
-scrollButton.addEventListener('click', function(){
-	scrolltop();
-});
+	<script>
+		var scrollButton = document.getElementById("top");
+		scrollButton.addEventListener('click', function () {
+			scrolltop();
+		});
 
-function scrolltop(){
-	window.scrollTo({
-		top: 0,
-		behavior: 'smooth',
-		duretion: '5000'
-	});
-}
-</script>
-<div class="mainvideo">
-<video  autoplay loop muted plays-inline src="Media/Untitled video - Made with Clipchamp (1).mp4" type="video/mp4"></video>
-</div>
-<div class="main">
-	<div class="desk">	   
-	<div class="nev" id="nev">
-		
-		<div id="logo" class="logo">
-	   <a href="index.html"><img src= "Media/hs-logo-nasa.png" alt="nasa_logo"></a>
-		</div>
-		
-		<div class="nav_button">
-		<ul>
-			<a href="index.html" style="--i:1;">Home</a>
-			<a href="Event.html" style="--i:2;">Event</a>
-			<a href="Gallary.html" style="--i:3;">Gallary</a>
-			<a href="Mission.html" style="--i:4;">Mission</a>
-			<a href="Contact.html" style="--i:5;">Contact us</a>
-			</ul>
-		</div>
-		
-		<div id="scearchbt" class="container">
-    <input placeholder="Type to search..." required="" class="input" name="text" type="text">
-    <div class="icon">
-        <svg viewBox="0 0 512 512" class="ionicon" xmlns="http://www.w3.org/2000/svg">
-            <title>Search</title>
-            <path stroke-width="32" stroke-miterlimit="10" stroke="currentColor" fill="none" d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z"></path>
-            <path d="M338.29 338.29L448 448" stroke-width="32" stroke-miterlimit="10" stroke-linecap="round" stroke="currentColor" fill="none"></path>
-        </svg>
-    </div>
-</div>
-		</div>
+		function scrolltop() {
+			window.scrollTo({
+				top: 0,
+				behavior: 'smooth',
+				duretion: '5000'
+			});
+		}
+	</script>
+	<div class="mainvideo">
+		<video autoplay loop muted plays-inline src="Media/Untitled video - Made with Clipchamp (1).mp4"
+			type="video/mp4"></video>
 	</div>
+	<div class="main">
+		<div class="desk">
+			<div class="nev upnev" id="nev">
 
+				<div id="logo" class="logo uplogo">
+					<a href="index.html"><img src="Media/hs-logo-nasa.png" alt="nasa_logo"></a>
+				</div>
 
-		<div class="mobile">
-		<div class="monev">
-		
-			<div class="mologo">
-		  <img src= "Media/hs-logo-nasa.png" alt="nasa_logo" href = "index.html">
-			<div>
-		 <i class="bi bi-list menu" id="menuone"></i>
-		  <i class="bi bi-x-lg menu" id="menutw"></i>
-		</div>
-		</div>
+				<div class="nav_button upbt">
+					<ul>
+						<a href="index.html" style="--i:1;">Home</a>
+						<a href="Event.html" style="--i:2;">Event</a>
+						<a href="Gallary.html" style="--i:3;">Gallary</a>
+						<a href="Mission.html" style="--i:4;">Mission</a>
+						<a href="Contact.html" style="--i:5;">Contact us</a>
+					</ul>
+				</div>
 
-			
-			<div class="openmenu">
-			<div class="monav_button">
-				
-				
-		<ul>
-			<a href="index.html" style="--i:1;">Home</a>
-			<a href="Event.html" style="--i:2;">Event</a>
-			<a href="Gallary.html" style="--i:3;">Gallary</a>
-			<a href="Mission.html" style="--i:4;">Mission</a>
-			<a href="Contact.html" style="--i:5;">Contact us</a>
-			</ul>
-
-
-				<div class="mocontainer">
+				<div id="scearchbt" class="container  upscr">
 					<input placeholder="Type to search..." required="" class="input" name="text" type="text">
 					<div class="icon">
 						<svg viewBox="0 0 512 512" class="ionicon" xmlns="http://www.w3.org/2000/svg">
 							<title>Search</title>
-							<path stroke-width="32" stroke-miterlimit="10" stroke="currentColor" fill="none" d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z"></path>
-							<path d="M338.29 338.29L448 448" stroke-width="32" stroke-miterlimit="10" stroke-linecap="round" stroke="currentColor" fill="none"></path>
+							<path stroke-width="32" stroke-miterlimit="10" stroke="currentColor" fill="none"
+								d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z"></path>
+							<path d="M338.29 338.29L448 448" stroke-width="32" stroke-miterlimit="10"
+								stroke-linecap="round" stroke="currentColor" fill="none"></path>
 						</svg>
 					</div>
 				</div>
-
 			</div>
 		</div>
-			
-			
+
+
+		<div class="mobile">
+			<div class="monev">
+
+				<div class="mologo">
+					<img src="Media/hs-logo-nasa.png" alt="nasa_logo" href="index.html">
+					<div>
+						<i class="bi bi-list menu" id="menuone"></i>
+						<i class="bi bi-x-lg menu" id="menutw"></i>
+					</div>
+				</div>
+
+
+				<div class="openmenu">
+					<div class="monav_button">
+
+
+						<ul>
+							<a href="index.html" style="--i:1;">Home</a>
+							<a href="Event.html" style="--i:2;">Event</a>
+							<a href="Gallary.html" style="--i:3;">Gallary</a>
+							<a href="Mission.html" style="--i:4;">Mission</a>
+							<a href="Contact.html" style="--i:5;">Contact us</a>
+						</ul>
+
+
+						<div class="mocontainer">
+							<input placeholder="Type to search..." required="" class="input" name="text" type="text">
+							<div class="icon">
+								<svg viewBox="0 0 512 512" class="ionicon" xmlns="http://www.w3.org/2000/svg">
+									<title>Search</title>
+									<path stroke-width="32" stroke-miterlimit="10" stroke="currentColor" fill="none"
+										d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z">
+									</path>
+									<path d="M338.29 338.29L448 448" stroke-width="32" stroke-miterlimit="10"
+										stroke-linecap="round" stroke="currentColor" fill="none"></path>
+								</svg>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+
 			</div>
 			<div class="progress-container">
 				<div class="progress-bar" id="myBar"></div>
-			  </div> 
+			</div>
 
 		</div>
-			
 
 
 
-		
-		
+
+
+
 		<div class="hero">
-			
+
 			<div class="hero_content">
-			<div class="hero-text">
-		<h1 data-text="Celebrating Hubble's 30th">Celebrating Hubble's 30th</h1>
-			<h2 data-text="Aniversary.">Aniversary.</h2>
+				<div class="hero-text">
+					<h1 data-text="Celebrating Hubble's 30th">Celebrating Hubble's 30th</h1>
+					<h2 data-text="Aniversary.">Aniversary.</h2>
 				</div>
 				<div class="contentp">
-				<p>
-					The NASA Hubble Space Telescope is a project of international cooperation
-					 between NASA and ESA. AURA’s Space Telescope Science Institute in Baltimore,
-					  Maryland, conducts Hubble science operations.
-				</p></div>
-			<div class="buttonland">
-				<div class="xxx"><a href="Event.html">Events</a></div>
-					<div class="yyy"><a href="Contact.html">Contact us</a></div>
-					
-
-				
-		      
-			</div>
-			<div class="iconn">
-				<ul>
-					<a href=""><i class="bi bi-twitter"></i></a>
-					<a href=""><i class="bi bi-facebook"></i></a>
-					<a href=""><i class="bi bi-whatsapp"></i></a>
-					<a href=""><i class="bi bi-linkedin"></i></a>
-				
-				</ul>
+					<p>
+						The NASA Hubble Space Telescope is a project of international cooperation
+						between NASA and ESA. AURA’s Space Telescope Science Institute in Baltimore,
+						Maryland, conducts Hubble science operations.
+					</p>
 				</div>
+				<div class="buttonland">
+					<div class="xxx"><a href="Event.html">Events</a></div>
+					<div class="yyy"><a href="Contact.html">Contact us</a></div>
+
+
+
+
+				</div>
+				<div class="iconn">
+					<ul>
+						<a href=""><i class="bi bi-twitter"></i></a>
+						<a href=""><i class="bi bi-facebook"></i></a>
+						<a href=""><i class="bi bi-whatsapp"></i></a>
+						<a href=""><i class="bi bi-linkedin"></i></a>
+
+					</ul>
+				</div>
+			</div>
+			<div class="hero_vodeo">
+
+				<div class="heo_video_one">
+					<img src="https://stsci-opo.org/STScI-01H2GCKV7774CYCH8R9TFRZK4G.png" alt="">
+					<p>Stephan's Quintet: A Multi-wavelength Exploration</p>
+					<i id="play_video" class="bi bi-play-circle"></i>
+
+				</div>
+
+
+				<div class="heo_video_two">
+					<img src="https://stsci-opo.org/STScI-01H0MXN4DGAN5ZK33F4RJGVGYE.jpg" alt="">
+					<p>Computer Representation of the Stellar Motions in the Core of M4
+						Hundreds of small white blobs and tiny yellow dots on a black background.</p>
+					<i id="play_videotwo" class="bi bi-play-circle"></i>
+
+				</div>
+
+			</div>
+
+
 		</div>
-		<div class="hero_vodeo">
-			
-			<div class="heo_video_one">
-				<img src="https://stsci-opo.org/STScI-01H2GCKV7774CYCH8R9TFRZK4G.png" alt="">
-				<p>Stephan's Quintet: A Multi-wavelength Exploration</p>
-				<i id="play_video" class="bi bi-play-circle"></i>
-				
-		</div>
-		
-			
-		<div class="heo_video_two">
-			<img src="https://stsci-opo.org/STScI-01H0MXN4DGAN5ZK33F4RJGVGYE.jpg" alt="">
-			<p>Computer Representation of the Stellar Motions in the Core of M4
-				Hundreds of small white blobs and tiny yellow dots on a black background.</p>
-				<i id="play_videotwo" class="bi bi-play-circle"></i>
-			  
-		</div>
-			
-		</div>
-	
-				
-		</div>
-	
+
 		<div class="scroll_main">
 			<marquee scrollamount="10">
-		       <a>WE ARE </a> 
-				<a>CELEBRATING </a> 
+				<a>WE ARE </a>
+				<a>CELEBRATING </a>
 				<a>30'S </a>
 				<a>YEAR </a>
 				<a>ANIVERSARY </a>
 				<a>OF</a>
-				<a>HUBBLE</a> 
+				<a>HUBBLE</a>
 				<a>SPACE</a>
-				<a>TELESCOPE.</a>  
-		</marquee>
+				<a>TELESCOPE.</a>
+			</marquee>
 		</div>
-			
-		<div class="discovery" >
-   
+
+		<div class="discovery">
+
 			<h3> celebrating 30 Years of Discovery </h3>
 			<div class="content">
 				<div class="contentimg">
-           
+
 					<div class="slideshow-container">
-					
-					<div class="mySlides fade">
-					  <div class="numbertext">1 / 3</div>
-					  <img src="https://hubblesite.org/files/live/sites/hubble/files/home/mission-and-telescope/hubble-stats/_images/hs-STS-31-Launch-GPN-2000-000684-2400x1200.jpg?t=tn2400" alt="image" style="width:100%">
-					  <!--<div class="text">Discovery lifts-off on April 24, 1990 to deliver the first leading space-based telescope into orbit</div>--> 
+
+						<div class="mySlides fade">
+							<div class="numbertext">1 / 3</div>
+							<img src="https://hubblesite.org/files/live/sites/hubble/files/home/mission-and-telescope/hubble-stats/_images/hs-STS-31-Launch-GPN-2000-000684-2400x1200.jpg?t=tn2400"
+								alt="image" style="width:100%">
+							<!--<div class="text">Discovery lifts-off on April 24, 1990 to deliver the first leading space-based telescope into orbit</div>-->
+						</div>
+
+						<div class="mySlides fade">
+							<div class="numbertext">2 / 3</div>
+							<img src="https://hubblesite.org/files/live/sites/hubble/files/home/_images/hs-1512a-2400x1200.jpg?t=tn2400"
+								alt="image" style="width:100%">
+							<!--<div class="text">Caption Two</div>-->
+						</div>
+
+						<div class="mySlides fade">
+							<div class="numbertext">3 / 3</div>
+							<img src="https://hubblesite.org/files/live/sites/hubble/files/home/_images/hs-s109e5485-2400x1200.jpg?t=tn2400"
+								alt="image" style="width:100%">
+							<!--  <div class="text">Caption Three</div>-->
+						</div>
+
+						<a class="prev" onclick="plusSlides(-1)">❮</a>
+						<a class="next" onclick="plusSlides(1)">❯</a>
+						<div class="manindots" style="text-align:center">
+							<span class="dot" onclick="currentSlide(1)"></span>
+							<span class="dot" onclick="currentSlide(2)"></span>
+							<span class="dot" onclick="currentSlide(3)"></span>
+						</div>
+
 					</div>
-					
-					<div class="mySlides fade">
-					  <div class="numbertext">2 / 3</div>
-					  <img src="https://hubblesite.org/files/live/sites/hubble/files/home/_images/hs-1512a-2400x1200.jpg?t=tn2400" alt="image" style="width:100%">
-					  <!--<div class="text">Caption Two</div>--> 
-					</div>
-					
-					<div class="mySlides fade">
-					  <div class="numbertext">3 / 3</div>
-					  <img src="https://hubblesite.org/files/live/sites/hubble/files/home/_images/hs-s109e5485-2400x1200.jpg?t=tn2400" alt="image" style="width:100%">
-					 <!--  <div class="text">Caption Three</div>--> 
-					</div>
-					
-					<a class="prev" onclick="plusSlides(-1)">❮</a>
-					<a class="next" onclick="plusSlides(1)">❯</a>
-					<div class="manindots" style="text-align:center">
-						<span class="dot" onclick="currentSlide(1)"></span> 
-						<span class="dot" onclick="currentSlide(2)"></span> 
-						<span class="dot" onclick="currentSlide(3)"></span> 
-					  </div>
-							  
-					</div>
-					
-								</div>
-	  
-		  <div class="Pcontent" >
-		   
-		  <p>Orbiting high above the Earth, the Hubble Space Telescope has a clear view of the universe free from the
-			 blurring and absorbing effects of the atmosphere. In addition to observing visible and near-infrared light,
-			  Hubble detects ultraviolet light, which is absorbed by the atmosphere and visible only from space. 
-			  The telescope has beamed hundreds of thousands of celestial images back to Earth during its time in space.
-			  Orbiting high above the Earth, the Hubble Space Telescope has a clear view of the universe free from the
-			  blurring and absorbing effects of the atmosphere. In addition to observing visible and near-infrared light,
-			   Hubble detects ultraviolet light, which is absorbed by the atmosphere and visible only from space. 
-			   The telescope has beamed hundreds of thousands of celestial images back to Earth during its time in spac</p>
-				<p class="hide"   style="margin-top: 20px;">
-					Hubble is a Cassegrain reflector telescope. Light from celestial objects travels down a tube, is
-					 collected by a bowl-like, inwardly curved primary mirror and reflected toward a smaller, dome-shaped,
-					  outwardly curved secondary mirror. The secondary mirror bounces the light back to the primary mirror 
-					  and through a hole in its center. The light is focused on a small area called the focal plane,
-					   where it is picked up by its various science instruments.
-					   Hubble is a Cassegrain reflector telescope. Light from celestial objects travels down a tube, is
-					 collected by a bowl-like, inwardly curved primary mirror and reflected toward a smaller, dome-shaped,
-					  outwardly curved secondary mirror. The secondary mirror bounces the light back to the primary mirror 
-					  and through a hole in its center. The light is focused on a small area called the focal plane,
-					   where it is picked up by its various science instruments.
-				</p>
+
+				</div>
+
+				<div class="Pcontent">
+
+					<p>Orbiting high above the Earth, the Hubble Space Telescope has a clear view of the universe free
+						from the
+						blurring and absorbing effects of the atmosphere. In addition to observing visible and
+						near-infrared light,
+						Hubble detects ultraviolet light, which is absorbed by the atmosphere and visible only from
+						space.
+						The telescope has beamed hundreds of thousands of celestial images back to Earth during its time
+						in space.
+						Orbiting high above the Earth, the Hubble Space Telescope has a clear view of the universe free
+						from the
+						blurring and absorbing effects of the atmosphere. In addition to observing visible and
+						near-infrared light,
+						Hubble detects ultraviolet light, which is absorbed by the atmosphere and visible only from
+						space.
+						The telescope has beamed hundreds of thousands of celestial images back to Earth during its time
+						in spac</p>
+					<p class="hide" style="margin-top: 20px;">
+						Hubble is a Cassegrain reflector telescope. Light from celestial objects travels down a tube, is
+						collected by a bowl-like, inwardly curved primary mirror and reflected toward a smaller,
+						dome-shaped,
+						outwardly curved secondary mirror. The secondary mirror bounces the light back to the primary
+						mirror
+						and through a hole in its center. The light is focused on a small area called the focal plane,
+						where it is picked up by its various science instruments.
+						Hubble is a Cassegrain reflector telescope. Light from celestial objects travels down a tube, is
+						collected by a bowl-like, inwardly curved primary mirror and reflected toward a smaller,
+						dome-shaped,
+						outwardly curved secondary mirror. The secondary mirror bounces the light back to the primary
+						mirror
+						and through a hole in its center. The light is focused on a small area called the focal plane,
+						where it is picked up by its various science instruments.
+					</p>
+				</div>
+			</div>
+
+
+
+			<button class="btn" type="button">
+				<strong>Learn More</strong>
+				<div id="container-stars">
+					<div id="stars"></div>
+				</div>
+
+				<div id="glow">
+					<div class="circle"></div>
+					<div class="circle"></div>
+				</div>
+
+			</button>
 		</div>
-		</div>
-	  
-	
-
-				<button class="btn" type="button">
-  <strong>Learn More</strong>
-  <div id="container-stars">
-    <div id="stars"></div>
-  </div>
-
-  <div id="glow">
-    <div class="circle"></div>
-    <div class="circle"></div>
-  </div>
-
-</button>
-	</div>
 
 
-   <div class="abouthubble">
-    <h2>About the Hubble Space Telescope</h2>
-     <div class="line"></div>
-	 <div class="hubblecontent">
-		<p class="firstp" style="padding-top: 20px;">Orbiting high above the Earth, the Hubble Space Telescope has a clear view of the
-			 universe free from the blurring and absorbing effects of the atmosphere. In addition to observing visible
-			 and near-infrared light, Hubble detects ultraviolet light, which is absorbed by the atmosphere and visible only from
-			  space. The telescope has beamed hundreds of thousands of celestial images back to Earth during its time in space.</p>
-			 <br>
-			 <p class="secondtp">Hubble is a Cassegrain reflector telescope. Light from celestial objects travels down a tube,
-				 is collected by a bowl-like, inwardly curved primary mirror and reflected toward a smaller, dome-shaped, 
-				 outwardly curved secondary mirror. The secondary mirror bounces the light back to the primary mirror 
-				and through a hole in its center. The light is focused on a small area called the focal plane, where it is
-				 picked up by its various science instruments.</p>
+		<div class="abouthubble">
+			<h2>About the Hubble Space Telescope</h2>
+			<div class="line"></div>
+			<div class="hubblecontent">
+				<p class="firstp" style="padding-top: 20px;">Orbiting high above the Earth, the Hubble Space Telescope
+					has a clear view of the
+					universe free from the blurring and absorbing effects of the atmosphere. In addition to observing
+					visible
+					and near-infrared light, Hubble detects ultraviolet light, which is absorbed by the atmosphere and
+					visible only from
+					space. The telescope has beamed hundreds of thousands of celestial images back to Earth during its
+					time in space.</p>
+				<br>
+				<p class="secondtp">Hubble is a Cassegrain reflector telescope. Light from celestial objects travels
+					down a tube,
+					is collected by a bowl-like, inwardly curved primary mirror and reflected toward a smaller,
+					dome-shaped,
+					outwardly curved secondary mirror. The secondary mirror bounces the light back to the primary mirror
+					and through a hole in its center. The light is focused on a small area called the focal plane, where
+					it is
+					picked up by its various science instruments.</p>
 				<figure style="margin-top: 60px;">
-					<img src="https://hubblesite.org/files/live/sites/hubble/files/home/mission-and-telescope/the-telescope/_images/HubbleLightPath.jpg?t=tn2400" alt="hubble">
+					<img src="https://hubblesite.org/files/live/sites/hubble/files/home/mission-and-telescope/the-telescope/_images/HubbleLightPath.jpg?t=tn2400"
+						alt="hubble">
 					<figcaption>
-						Hubble’s 1,825 pound, 7.8-foot (2.4-meter) diameter primary mirror collects light from its astronomical target and reflects it to a 12-inch (0.3-meter) diameter secondary mirror located
-						 in the optical tube. This secondary mirror then reflects the light through a hole in the primary mirror to form an image at the telescope’s focal plane. There it is intercepted by pick-off 
-						 mirrors that pass it into the scientific instruments. Hubble’s mirrors are made of ultra-low expansion glass kept at a “room temperature” of about 70°F (21°C) to avoid warping. The reflecting
-						  surfaces are coated with a 3/1,000,000-inch layer of pure aluminum and protected by a 1/1000,000-inch layer of magnesium fluoride that also makes the mirror more reflective to ultraviolet light.
+						Hubble’s 1,825 pound, 7.8-foot (2.4-meter) diameter primary mirror collects light from its
+						astronomical target and reflects it to a 12-inch (0.3-meter) diameter secondary mirror located
+						in the optical tube. This secondary mirror then reflects the light through a hole in the primary
+						mirror to form an image at the telescope’s focal plane. There it is intercepted by pick-off
+						mirrors that pass it into the scientific instruments. Hubble’s mirrors are made of ultra-low
+						expansion glass kept at a “room temperature” of about 70°F (21°C) to avoid warping. The
+						reflecting
+						surfaces are coated with a 3/1,000,000-inch layer of pure aluminum and protected by a
+						1/1000,000-inch layer of magnesium fluoride that also makes the mirror more reflective to
+						ultraviolet light.
 					</figcaption>
 				</figure>
 				<br>
 				<br>
-				
-				<p class="thirddtp" >Hubble's current suite of instruments includes the Wide Field Camera 3 (WFC3), Cosmic Origins Spectrograph (COS), Advanced Camera for Surveys (ACS), Space Telescope Imaging Spectrograph (STIS) and Fine Guidance Sensors (FGS).</p>
-	 </div>
 
-   </div>
-		
+				<p class="thirddtp">Hubble's current suite of instruments includes the Wide Field Camera 3 (WFC3),
+					Cosmic Origins Spectrograph (COS), Advanced Camera for Surveys (ACS), Space Telescope Imaging
+					Spectrograph (STIS) and Fine Guidance Sensors (FGS).</p>
+			</div>
+
+		</div>
+
 		<div class="Partners">
-		<h2>International Partners</h2>
-				<div class="partners_box">
-			<a>The Hubble Space Telescope is a project of international cooperation between NASA and the European Space Agency. NASA's Goddard Space Flight Center in Greenbelt, MD., manages the telescope. The Space Telescope Science Institute (STScI) in Baltimore, MD., conducts Hubble science operations. STScI is operated for NASA by the Association of Universities for Research in Astronomy, Inc., in Washington, DC.	
+			<h2>International Partners</h2>
+			<div class="partners_box">
+				<a>The Hubble Space Telescope is a project of international cooperation between NASA and the European
+					Space Agency. NASA's Goddard Space Flight Center in Greenbelt, MD., manages the telescope. The Space
+					Telescope Science Institute (STScI) in Baltimore, MD., conducts Hubble science operations. STScI is
+					operated for NASA by the Association of Universities for Research in Astronomy, Inc., in Washington,
+					DC.
 					<br><br>
-			As lead agency, NASA has overall responsibility for the Hubble Space Telescope.  ESA’s contributions to HST include among other things, the Faint Object Camera, the first two solar wings that powered the spacecraft and a team of space scientists and engineers at the Space Telescope Science Institute (STScI) in Baltimore, MD.  Europe's contribution to HST entitles European astronomers to 15% of the telescope's observing time.
+					As lead agency, NASA has overall responsibility for the Hubble Space Telescope. ESA’s contributions
+					to HST include among other things, the Faint Object Camera, the first two solar wings that powered
+					the spacecraft and a team of space scientists and engineers at the Space Telescope Science Institute
+					(STScI) in Baltimore, MD. Europe's contribution to HST entitles European astronomers to 15% of the
+					telescope's observing time.
 					<div class="line"></div>
-					</a>
-				</div>
-		    </div>
-    
+				</a>
+			</div>
+		</div>
+
 		<div class="about_science">
-		<h3>About the Space Telescope <br>Science Institute</h3>
+			<h3>About the Space Telescope <br>Science Institute</h3>
 			<div class="row">
-			<div class="science_box first_one">
-			<a>
-				<span style="font-size: 30px; font-weight: 400; color: #ff014f;">The</span> mission of the Space Telescope Science Institute (STScI) is to help humanity explore the universe with advanced space telescopes and ever-growing data archives. STScI is a multi-mission science operations center for NASA’s flagship observatories and a world-class astronomical research center.
-				<br>
-				<div class="line_science"></div>
-				</a>
-				
-			</div>
+				<div class="science_box first_one">
+					<a>
+						<span style="font-size: 30px; font-weight: 400; color: #ff014f;">The</span> mission of the Space
+						Telescope Science Institute (STScI) is to help humanity explore the universe with advanced space
+						telescopes and ever-growing data archives. STScI is a multi-mission science operations center
+						for NASA’s flagship observatories and a world-class astronomical research center.
+						<br>
+						<div class="line_science"></div>
+					</a>
+
+				</div>
 				<div class="science_box first_two">
-                    <a> 
-						<b style="font-size: 30px; font-weight: 400; color: #ff014f"> Established </b> 
-               in 1981, the institute has developed and executed the science and mission operations for the Hubble Space Telescope since its launch in 1990 and will conduct the science and mission operations for the James Webb Space Telescope. The institute will also be the science operations center for the Nancy Grace Roman Space Telescope, formerly known as the Wide Field Infrared Survey Telescope, launching in the mid-2020s.
-					<br>
-				<div class="line_science"></div>
+					<a>
+						<b style="font-size: 30px; font-weight: 400; color: #ff014f"> Established </b>
+						in 1981, the institute has developed and executed the science and mission operations for the
+						Hubble Space Telescope since its launch in 1990 and will conduct the science and mission
+						operations for the James Webb Space Telescope. The institute will also be the science operations
+						center for the Nancy Grace Roman Space Telescope, formerly known as the Wide Field Infrared
+						Survey Telescope, launching in the mid-2020s.
+						<br>
+						<div class="line_science"></div>
 					</a>
-			     </div>
-                    <div class="science_box first_three">
-						<a>
-                   <b style="font-size: 30px; font-weight: 400; color: #ff014f;">The</b>  institute also supports other astronomy programs and its science staff conducts world-class scientific research. STScI is the home of the Barbara A. Mikulski Archive for Space Telescopes (MAST), where the data of over 20 astronomical missions is curated and disseminated for use by the global astronomy community. The institute brings astrophysics to the public through internationally recognized news, education, and public outreach programs.
-							<br>
-				<div class="line_science"></div>
-						</a>
+				</div>
+				<div class="science_box first_three">
+					<a>
+						<b style="font-size: 30px; font-weight: 400; color: #ff014f;">The</b> institute also supports
+						other astronomy programs and its science staff conducts world-class scientific research. STScI
+						is the home of the Barbara A. Mikulski Archive for Space Telescopes (MAST), where the data of
+						over 20 astronomical missions is curated and disseminated for use by the global astronomy
+						community. The institute brings astrophysics to the public through internationally recognized
+						news, education, and public outreach programs.
+						<br>
+						<div class="line_science"></div>
+					</a>
+				</div>
+				<div class="science_box first_four">
+					<a>
+						<b style="font-size: 30px; font-weight: 400; color: #ff014f;">The</b> institute is located on
+						the campus of Johns Hopkins University in Baltimore, Maryland, and is operated by the
+						Association of Universities for Research in Astronomy (AURA) for NASA.
+						<br>
+						<div class="line_science"></div>
+					</a>
+
+				</div>
 			</div>
-			<div class="science_box first_four">
-				<a>
-                    <b style="font-size: 30px; font-weight: 400; color: #ff014f;">The</b> institute is located on the campus of Johns Hopkins University in Baltimore, Maryland, and is operated by the Association of Universities for Research in Astronomy (AURA) for NASA.
-				<br>
-				<div class="line_science" ></div>
-				</a>
-			
-			</div>
-		</div>
-			
+
 			<div class="science_image">
-	          <img src="https://hubblesite.org/files/live/sites/hubble/files/home/about-us/_images/STScI-H-AboutUs-MullerBuilding-001.jpg?t=tn1200" alt="image">
+				<img src="https://hubblesite.org/files/live/sites/hubble/files/home/about-us/_images/STScI-H-AboutUs-MullerBuilding-001.jpg?t=tn1200"
+					alt="image">
 				<div class="p">
-				<p>
-				The Space Telescope Science Institute in Baltimore, Maryland, is home to the science programs of the Hubble Space Telescope, the James Webb Space Telescope, and the data archives of other NASA missions. CREDIT: Zoltan G. Levay.
-				</p>
-				<a>
-					<div class="ic">
-				<i class="bi bi-star-fill"></i>
-					<i class="bi bi-star-fill"></i>
-					<i class="bi bi-star-fill"></i>
-					<i class="bi bi-star-fill"></i>
-				</div>
-				</a>
-				
-					</div>
-			</div>
-				
-		</div>
-		
-		<div class="about_commun">
-		<h2>About Communications and<br> Outreac</h2>
-				<div class="commun_box">
-			<a>Public outreach is at the heart of STScI’s mission. The communications and outreach team finds innovative ways to share complex scientific discoveries with the public. An interdisciplinary group of communications professionals and scientists works together to prepare and disseminate news items, as well as posters, exhibits, and other informal education products in print and electronic formats.
-					<br><br>
-			HubbleSite.org is produced by the Space Telescope Science Institute's Office of Public Outreach (OPO).
-					<div class="line"></div>
+					<p>
+						The Space Telescope Science Institute in Baltimore, Maryland, is home to the science programs of
+						the Hubble Space Telescope, the James Webb Space Telescope, and the data archives of other NASA
+						missions. CREDIT: Zoltan G. Levay.
+					</p>
+					<a>
+						<div class="ic">
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+						</div>
 					</a>
+
 				</div>
-		    </div>
+			</div>
+
+		</div>
+
+		<div class="about_commun">
+			<h2>About Communications and<br> Outreac</h2>
+			<div class="commun_box">
+				<a>Public outreach is at the heart of STScI’s mission. The communications and outreach team finds
+					innovative ways to share complex scientific discoveries with the public. An interdisciplinary group
+					of communications professionals and scientists works together to prepare and disseminate news items,
+					as well as posters, exhibits, and other informal education products in print and electronic formats.
+					<br><br>
+					HubbleSite.org is produced by the Space Telescope Science Institute's Office of Public Outreach
+					(OPO).
+					<div class="line"></div>
+				</a>
+			</div>
+		</div>
 		<hr>
 		<div class="footer">
-		<a>The NASA Hubble Space Telescope is a project of international cooperation between NASA and ESA. AURA’s Space Telescope Science Institute in Baltimore, Maryland, conducts Hubble science operations.</a>
-		<div class="rowtep">
-			<div class="space_ins_logo">
-			<img src="Media/hs-logo-nasa.png" class="hide-bg" alt="img">
-			
-			</div>
-			<div class="aboutus">
-			<a href="#">About Us</a>
-				<a href="#">Glossary</a>
-				<a href="#">Copyright</a>
-			
-			</div>
-			<div class="aboutus">
-			<a href="#">Contact Us</a>
-				<a href="#">Privacy&nbsp;Policy</a>
-				<a href="#">Sitemap</a>
-			
-			</div>
-			<div class="logo">
-			<i class="bi bi-facebook"></i>
-				<i class="bi bi-twitter"></i>
-				<i class="bi bi-instagram"></i>
-				<i class="bi bi-youtube"></i>
-			
-			</div>
-			
+			<a>The NASA Hubble Space Telescope is a project of international cooperation between NASA and ESA. AURA’s
+				Space Telescope Science Institute in Baltimore, Maryland, conducts Hubble science operations.</a>
+			<div class="rowtep">
+				<div class="space_ins_logo">
+					<img src="Media/hs-logo-nasa.png" class="hide-bg" alt="img">
+
+				</div>
+				<div class="aboutus">
+					<a href="#">About Us</a>
+					<a href="#">Glossary</a>
+					<a href="#">Copyright</a>
+
+				</div>
+				<div class="aboutus">
+					<a href="#">Contact Us</a>
+					<a href="#">Privacy&nbsp;Policy</a>
+					<a href="#">Sitemap</a>
+
+				</div>
+				<div class="logo">
+					<i class="bi bi-facebook"></i>
+					<i class="bi bi-twitter"></i>
+					<i class="bi bi-instagram"></i>
+					<i class="bi bi-youtube"></i>
+
+				</div>
+
 			</div>
 		</div>
-		
-</div>
-<script>
-	// When the user scrolls the page, execute myFunction 
-	window.onscroll = function() {myFunction()};
-	
-	function myFunction() {
-	  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-	  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-	  var scrolled = (winScroll / height) * 100;
-	  document.getElementById("myBar").style.width = scrolled + "%";
-	}
+
+	</div>
+	<script>
+		// When the user scrolls the page, execute myFunction 
+		window.onscroll = function () { myFunction() };
+
+		function myFunction() {
+			var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+			var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+			var scrolled = (winScroll / height) * 100;
+			document.getElementById("myBar").style.width = scrolled + "%";
+		}
 	</script>
-	 
-<script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-	
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+	<script src="https://code.jquery.com/jquery-3.7.0.js"
+		integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+		integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+		integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script src="Js/main_js.js"></script>
 </body>
+
 </html>
