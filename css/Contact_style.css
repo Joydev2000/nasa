@@ -217,9 +217,7 @@ left: 200px;
 
 .monev{
 	width: 100%;
-	background: Transparent; 
-	display: flex;
-
+	background: Transparent;
 	display: flex;
 	justify-content: space-between;
 	position: fixed;
